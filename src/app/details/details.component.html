@@ -1,0 +1,17 @@
+<div id="sign" class="container-fluid">
+    <div class="justify-content-center" *ngIf="Signs">
+        <div class="card col text-center">
+            <div>
+                <img src="{{Signs.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">{{Signs.name|titlecase}}</h6>
+                    <h5 style="color: rgb(98, 103, 146);">{{Signs.heading1|uppercase}}</h5>
+                    <p class="card-text">{{Signs.date}}.</p>
+                    <h5 style="color: rgb(98, 103, 146);">{{Signs.heading2|uppercase}}</h5>
+                    <p class="card-text">{{Signs.traits}}.</p>
+                </div>
+            </div>
+        </div>
+        <p>{{Signs.description}}</p>
+    </div>
+</div>

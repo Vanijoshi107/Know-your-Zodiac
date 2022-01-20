@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sign } from '../shared/sign';
-import { SIGNS } from '../shared/signs';
+import { ZodiacService } from '../services/zodiac.service';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +9,15 @@ import { SIGNS } from '../shared/signs';
 })
 export class HomeComponent implements OnInit {
 
-  sign:Sign[]= SIGNS;
-  constructor() { }
+  sign!:Sign[];
+  SelectedSign!:Sign;
+  constructor(private zodiacService:ZodiacService) { }
 
   ngOnInit(): void {
+    this.sign = this.zodiacService.getSign();
   }
 
+  onSelect(sign:Sign){
+    this.SelectedSign = sign;
+  }
 }
