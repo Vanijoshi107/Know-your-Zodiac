@@ -22,17 +22,17 @@
 </header>
 <div id="sign" class="container-fluid">
   <h2 class="text-center">Choose your sign</h2>
-  <div class="row row-cols-4 justify-content-center">
+  <div class="row row-cols-6 justify-content-center">
     <div class="card col text-center" *ngFor="let s of sign">
       <div>
       <img src="{{s.image}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h6 class="card-title">{{s.name|titlecase}}</h6>
-        <h5 style="color: rgb(98, 103, 146);">{{s.heading1|uppercase}}</h5>
+        <!-- <h5 style="color: rgb(98, 103, 146);">{{s.heading1|uppercase}}</h5> -->
         <p class="card-text">{{s.date}}.</p>
-        <h5 style="color: rgb(98, 103, 146);">{{s.heading2|uppercase}}</h5>
-        <p class="card-text">{{s.traits}}.</p>
-        <a href="#" class="btn btn-primary">Know more</a>
+        <!-- <h5 style="color: rgb(98, 103, 146);">{{s.heading2|uppercase}}</h5> -->
+        <!-- <p class="card-text">{{s.traits}}.</p> -->
+        <a href="#" class="btn btn-outline-dark">Know more</a>
       </div>
     </div>
     </div>
