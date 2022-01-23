@@ -32,4 +32,12 @@ footer{
     nav a{
         font-size: 1.2em;
     }
+    img{
+        margin: auto;
+        padding: 1rem;
+        width: 6rem;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        /* border-radius:6rem;  */
+        align-items: center;
+    }
 }
