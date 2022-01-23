@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Know Your Zodiac</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand mx-auto" href="#">Know Your Zodiac</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -13,10 +13,10 @@
           <a class="nav-link" href="#sign">Signs</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
-<header class="container">
+<header class="container my-4">
   <h1 class="text-center">Zodiac Signs and Astrology Characteristics</h1>
   <p>Your Zodiac sign, or star sign, reflects the position of the sun when you were born. With its strong influence on your personality, character, and emotions, your sign is a powerful tool for understanding yourself and your relationships. And of course, your sign can show you the way to an incredible life.</p>
 </header>
@@ -28,19 +28,14 @@
       <img src="{{s.image}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h6 class="card-title">{{s.name|titlecase}}</h6>
-        <!-- <h5 style="color: rgb(98, 103, 146);">{{s.heading1|uppercase}}</h5> -->
         <p class="card-text">{{s.date}}.</p>
-        <!-- <h5 style="color: rgb(98, 103, 146);">{{s.heading2|uppercase}}</h5> -->
-        <!-- <p class="card-text">{{s.traits}}.</p> -->
-        <a href="#" class="btn btn-outline-dark" (click)="onSelect(s)">Know more</a>
+        <a class="btn btn-outline-dark" (click)="onSelect(s)" [routerLink]="['/details',s.id]">Know more</a>
       </div>
     </div>
     </div>
   </div>
 </div>
-<hr><hr><hr>
-<app-details [Signs]="SelectedSign"></app-details>
 
-<footer>
+<footer class="my-3">
   -----All rights reserved----
 </footer>

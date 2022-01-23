@@ -11,4 +11,7 @@ export class ZodiacService {
   getSign():Sign[]{
     return SIGNS;
   }
+  getSigns(id:string):Sign{
+    return SIGNS.filter((sign)=>(sign.id ===id))[0];
+  }
 }

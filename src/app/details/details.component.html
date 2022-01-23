@@ -1,17 +1,37 @@
-<div id="sign" class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <button class="btn" (click)="goBack()">BACK</button>
+      <a class="navbar-brand mx-auto" href="#">Know Your Zodiac</a>
+    </div>
+  </nav>
+  <div id="sign" class="container my-4 col-lg-6 col-md-6 justify-content-center align-center">
     <div class="justify-content-center" *ngIf="Signs">
         <div class="card col text-center">
-            <div>
-                <img src="{{Signs.image}}" class="card-img-top" alt="...">
+            <div class="d-flex">
+                <img src="{{Signs.image2}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h6 class="card-title">{{Signs.name|titlecase}}</h6>
-                    <h5 style="color: rgb(98, 103, 146);">{{Signs.heading1|uppercase}}</h5>
-                    <p class="card-text">{{Signs.date}}.</p>
-                    <h5 style="color: rgb(98, 103, 146);">{{Signs.heading2|uppercase}}</h5>
-                    <p class="card-text">{{Signs.traits}}.</p>
+                    <h2 class="card-title">{{Signs.name|titlecase}} Facts</h2>
+                    <p class="card-text">{{Signs.date|uppercase}}.</p>
+                    <p class="card-text"><b>Traits - </b> {{Signs.traits}}.</p>
                 </div>
             </div>
         </div>
-        <p>{{Signs.description}}</p>
+        <div class="card col text-center">
+            <div *ngFor="let overview of Signs.overview">
+                
+                <div class="card-body text-start">
+                    <p><b>Element :</b> {{overview.element|titlecase}}</p>
+                    <p><b>Color : </b>{{overview.color|titlecase}}</p>
+                    <p><b>Lucky number : </b>{{overview.number|uppercase}}</p>
+                    <p><b>Ruler : </b>{{overview.ruler|titlecase}}.</p>
+                    <p><b>Gem : </b>{{overview.gem|titlecase}}</p>
+                    <p>{{Signs.description}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<footer class="my-3">
+  -----All rights reserved----
+</footer>
